@@ -3,7 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './Todo'
+import Actor from './Actor'
 function App() {
+  const actor = ['kung fu panda', 'hiro hamada', 'shaktuman', 'chota vim']
+  const friend = ['shahriar efti', 'nurullah', 'mijanur rahman', 'soykot azha', 'ahadur rahman', 'jahin']
   return (
     <>
       <Person></Person>
@@ -21,7 +24,9 @@ function App() {
       <Todo task='tailwind css' isDone={true}> </Todo>
       <Todo task='JavaScript' isDone={false}> </Todo>
       <Todo task='React' isDone={false}> </Todo>
-
+      {
+        actor.map(actor => <Actor name={actor}></Actor>)
+      }
     </>
   )
 }
