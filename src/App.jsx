@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Todo from './Todo'
 function App() {
   return (
     <>
@@ -15,7 +15,12 @@ function App() {
       <MyDevices name='Pulsar Bike' price='192000'></MyDevices>
       <AllStudent id='20104005' name='shafriki' home='dighipara' contact='01786141015'></AllStudent>
       <AllStudent></AllStudent>
-      <AllStudent id='20104005' name='shafriki' home='dighipara' contact='01786141015'></AllStudent>
+      <AllStudent id='20104005' name='shafriki' home='rajbari' contact='01786141015'></AllStudent>
+      <Todo task='html' isDone={true}> </Todo>
+      <Todo task='css' isDone={true}> </Todo>
+      <Todo task='tailwind css' isDone={true}> </Todo>
+      <Todo task='JavaScript' isDone={false}> </Todo>
+      <Todo task='React' isDone={false}> </Todo>
 
     </>
   )
