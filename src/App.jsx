@@ -2,107 +2,107 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import './Todo'
-import Todo from './Todo'
 
 function App() {
-
   return (
     <>
-      {/* <Person></Person>
-      <Education></Education>
-      <Certification></Certification>
-      <Device name="Laptop" Price="55"></Device>
-      <Device name="Mobile" Price="50"></Device>
-      <Device name="Bike" Price="192"></Device>
-      <Student name='shafriki islam' id='20104005'></Student>
-      <Student name='shahriar efti' id='20104049'></Student>
+      <Person></Person>
       <Student></Student>
-      <Products name='Samsung Mobile' price='10'></Products>
-      <Products name='Apple Mobile' price='100'></Products> */}
-      <Todo task='Learn React' isDone = {true}></Todo>
-      <Todo task='Explore Core Concepts' isDone = {true}></Todo>
-      <Todo task='Try JSX' isDone = {true}></Todo>
-      <Todo task='Read Probs' isDone = {true}></Todo>
-      <Todo task='Knowing React Components' isDone = {false}></Todo>
+      <Developer></Developer>
+      <AcademicInfo></AcademicInfo>
+      <MyDevices name='HP Laptop' price='56000'></MyDevices>
+      <MyDevices name='Samsung S21 FE Mobile' price='55000'></MyDevices>
+      <MyDevices name='Pulsar Bike' price='192000'></MyDevices>
+      <AllStudent id='20104005' name='shafriki' home='dighipara' contact='01786141015'></AllStudent>
+      <AllStudent></AllStudent>
+      <AllStudent id='20104005' name='shafriki' home='dighipara' contact='01786141015'></AllStudent>
+
     </>
   )
 }
 
-function Person(){
-  const profile ={
-    name: 'shafriki Islam',
+function Person() {
+  const person = {
+    name:'shafriki islam', 
     age: 25,
-    village: 'Dighipara,Rajbari,Nachole,Chapainawabganj'
+    country: 'bangladesh',
+    religion: 'Islam'
   }
-  return <h3>My name is {profile.name}. I am {profile.age} years old. I live in {profile.village} </h3>
+  return <p>Hi, I am {person.name}. I am {person.age} years old. I am from {person.country}. My religion is {person.religion} </p>
 }
 
-function Education() {
-  return (
+function Student() {
+  const student = {
+    name: 'shafriki islam',
+    id: 20104005,
+    dept:'cse',
+    instute: 'bauet'
+  }
+
+  return(
     <div className='student'>
-      <h3>Education Qualification:</h3>
-      <h5>Institution: BAUET</h5>
-      <h5>Department: Computer Science and Engineering</h5>
-    </div>
-  )
-}
-
-function Certification() {
-  const Cstyle = {
-    marginTop:'20px',
-    border: '2px solid green',
-    borderRadius: '10px'
-    
-  }
-  return (
-    <div style={Cstyle}>
-      <h4>Institute: Programming Hero</h4>
-      <p>Course Name: Web Development</p>
-      <p>Topic:</p>
-      <ol>
-        <li>HTML</li>
-        <li>css</li>
-        <li>Js</li>
-        <li>Tailwind CSS</li>
-        <li>React</li>
+      <h4 className='stitle'>Student Information</h4>
+      <ol className='lic'>
+        <li>Name: {student.name} </li>
+        <li>Student ID: {student.id} </li>
+        <li>Department: {student.dept} </li>
+        <li>University Name: {student.instute} </li>
       </ol>
     </div>
   )
 }
 
-function Device(props) {
-  const Dstyle = {
-    border: '3px solid purple',
-    padding: '4px',
+function Developer() {
+  const developerStyle ={
+    marginTop: '10px',
+    padding: '10px',
+    border:'2px solid purple',
     borderRadius: '10px'
-
   }
-  return (
-    <h3 style={Dstyle}>Device:{props.name} Price:{props.Price} </h3>
-  )
+  return <p style={developerStyle}>Hi, I am a new Front-End Developer.</p>
 }
 
-// const {name, id}= {name:'shafriki islam', id:'20104005'};
-
-function Student({name='not given', id='00'}) {
-  const Sstyle = {
-    border: '2px solid orange',
-    marginTop: '10px'
+function AcademicInfo() {
+  const academic = {
+    name: 'shafriki islam',
+    id: '20104005',
+    semester: 'Total 8th Semesters',
+    cgpa: '2.75',
+    profession: 'Front-End Developerd'
   }
-  return (
-    <div style={Sstyle}>
-      <h3>Student Information</h3>
-      <p>Studnet Name: {name} and ID:{id} </p>
-    </div>
-  )
-}
-
-function Products({name, price}) {
   return(
-    <div>
-      <p>Product Name:{name} and Price:{price} </p>
+    <div className='academic'>
+      <div>
+      <h1>Academic Information</h1>
+      <p>Student Name:{academic.name} </p>
+      <p>Student ID:{academic.id} </p>
+      <p>Total Semester:{academic.semester} </p>
+      <p>CGPA:{academic.cgpa} </p>
+      <p>Profession:{academic.profession} </p>
+      </div>
+      <div><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ficon%2Fmale-user-profile-picture_21294&psig=AOvVaw1odNFVbCSQUQLXfdS7_ZPq&ust=1729595391938000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCj3oqrn4kDFQAAAAAdAAAAABAE" alt="img
+      " /></div>
     </div>
   )
 }
+
+function MyDevices({name, price}){
+
+  return(
+    <p>Device Name: {name}  and It's Price: {price} </p>
+  )
+}
+
+function AllStudent({id='not given', name='not given', home='not given', contact='not given'}) {
+  
+  return (
+    <div className='allstudent'>
+      <h3 className='alltitle'>Student Id: {id} </h3>
+      <p>name: {name} </p>
+      <p>home-town: {home} </p>
+      <p>contact-no: {contact} </p>
+    </div>
+  )
+}
+
 export default App

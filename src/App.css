@@ -1,49 +1,53 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .student {
-  border: 1px solid red;
-  padding: 3px;
-  margin-top: 10px;
-  font-style: italic;
+  border: 2px solid tomato;
+  padding: 4px;
+  border-radius: 10px;
+  margin: 0px 50px 0px 50px;
+}
+.stitle {
+  color: tomato;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.lic {
+  color: orangered;
+  font: bolder;
+  margin: 0px auto 0px auto;
+}
+.academic {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  border: 3px solid purple;
+  margin: 0 auto; /* Centers the box */
+  width: fit-content; /* Optional: makes the width fit the content */
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+.academic p {
+  color: purple;
+  font-weight: bold;
+  text-align: left;
+}
+.allstudent {
+  border: 3px solid purple;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto; /* Centers the box */
+  width: fit-content; /* Optional: makes the width fit the content */
+  margin-bottom: 19px;
+}
+.alltitle {
+  color: hotpink;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+}
+.allstudent p {
+  color: sienna;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
 }
